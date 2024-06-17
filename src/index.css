@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "NordiquePro-Regular";
+  src: url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.eot");
+  src: url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/cefb940277605c6148b5fee45c3bcc26.svg#NordiquePro-Regular")
+      format("svg");
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "NordiquePro-Regular", "Poppins", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: "NordiquePro-Regular", monospace;
+}
