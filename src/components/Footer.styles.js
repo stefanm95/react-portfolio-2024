@@ -1,5 +1,88 @@
 import styled from "styled-components";
 
+export const PromoContainer = styled.div`
+/* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  width: 100%;
+  background-color: transparent;
+  flex-shrink: 1;
+  overflow-x: hidden;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    &:nth-child(0) {
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    &:nth-child(0) {
+      font-size: 12px;
+    }
+  }
+`;
+export const ContactInfo = styled.div`
+  display: flex;
+  position: relative;
+  left: 24vh;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 16px;
+  /* width: 100%; */
+  /* flex-shrink: 4; */
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    left: 0;
+    top: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    left: 0;
+    top: 10px;
+  }
+`;
+
+export const EmailButton = styled.button`
+  background-color: transparent;
+  border: 1px solid rgb(121, 121, 121, 0.8);
+  color: #dedede;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Urbanist";
+  font-size: 16px;
+  text-decoration: none;
+  height: 5vh;
+  &:hover {
+    color: #fff;
+  }
+  
+`;
+
+export const UpworkButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: #008000;
+  border: none;
+  color: #292c2e;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Urbanist";
+  font-size: 16px;
+  position: relative;
+  top: 5px;
+  height: 5vh;
+  text-decoration: none;
+  border: 1px solid rgb(121, 121, 121, 0.8);
+  &:hover {
+    color: #dedede;
+  }
+`;
+
 export const FooterContainer = styled.footer`
   position: relative; /* Ensure relative positioning for the footer container */
   display: flex;

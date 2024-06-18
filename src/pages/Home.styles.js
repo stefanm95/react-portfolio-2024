@@ -22,8 +22,14 @@ export const BigText = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     font-size: 32px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
+  @media screen and (max-width: 468px) {
+    font-size: 24px;
   }
 `;
 
@@ -373,14 +379,11 @@ export const PlanningSvg = styled.div`
 export const ScrollUp = styled.button`
   position: relative;
   left: 100px;
-  bottom: 30px;
+  bottom: -130px;
   background-color: transparent;
   border: none;
   padding: 15px 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color 0.3s ease;
   animation: 1s ease-in 0s 1 slideInFromRight;
   svg {

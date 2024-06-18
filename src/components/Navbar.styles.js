@@ -51,7 +51,10 @@ export const MenuContainer = styled.div`
   top: 20%; 
   right: 180px; 
   padding: 10px; 
-
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    right: 100px;
+  }
 `;
 
 export const MenuItem = styled(Link)`
