@@ -63,6 +63,7 @@ const Contact = () => {
           <Button type="submit">Submit</Button>
         </ContactForm>
       </Container>
+      <br />
       <Footer />
     </>
   );

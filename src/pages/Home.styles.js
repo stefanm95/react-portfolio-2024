@@ -196,8 +196,8 @@ export const SecondContainerText = styled.div`
 export const ScBox = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Center align items horizontally */
-  justify-content: center; /* Center align items vertically */
+  align-items: flex-start; 
+  justify-content: center; 
   margin-top: 20px;
 `;
 
@@ -227,6 +227,7 @@ export const Boxes = styled.div`
   width: auto;
   justify-content: space-around;
   top: 80px;
+  margin: 0;
   position: relative;
   border: 1px solid rgba(72, 78, 83, 0.8);
   background-color: transparent;
@@ -246,10 +247,12 @@ export const Box = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px; 
+  margin: 0;
   text-align: center;
   letter-spacing: 0.05rem;
   position: relative;
   overflow: hidden;
+  
   &.animate {
     animation: 1s ease-in showup; // Add animation property
   }
@@ -264,9 +267,7 @@ export const Box = styled.div`
       opacity: 1;
     }
   }
-  &:last-child {
-    border-right: none;
-  }
+ 
 `;
 
 export const BoxText = styled.div`
@@ -300,6 +301,8 @@ export const BoxSubText = styled.div`
     font-size: 16px;
   }
 `;
+
+
 export const ThirdContainer = styled.div`
   height: auto;
   width: auto;

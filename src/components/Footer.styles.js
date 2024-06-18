@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   height: auto;
   padding: 16px;
+  top: 50px;
   /* color: var(--text-color-secondary); */
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   width: 100%;
@@ -22,13 +23,10 @@ export const Title = styled.h1`
 `;
 
 export const FooterLinksContainer = styled.div`
-  display: flex;
-  align-items: flex-end;
   margin: 0 auto;
 `;
 
 export const FooterLink = styled.a`
-  margin-left: 20px;
-  margin-top: 4px;
+  margin-left: 10px;
   text-decoration: none;
 `;

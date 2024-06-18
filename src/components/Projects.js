@@ -1,4 +1,5 @@
-import { ProjectCard } from "./ProjectCard";
+import React from "react";
+import ProjectCard from "./ProjectCard";
 
 import projectImage1 from "../assets/images/Image1.png";
 import projectImage2 from "../assets/images/Image2.png";
@@ -8,7 +9,7 @@ import { ButtonLink, Container, ProjectsContainer } from "./Projects.styles";
 
 const projects = [
   {
-    id: 1,
+    id: "1",
     title: "Corporate Website Redesign",
     description:
       "Redesigned the corporate website to improve user experience and modernize the visual design.",
@@ -19,7 +20,7 @@ const projects = [
     images: projectImage1,
   },
   {
-    id: 2,
+    id: "2",
     title: "E-commerce Platform Development",
     description:
       "Developed a full-featured e-commerce platform with custom product listings and secure payment integration.",
@@ -30,7 +31,7 @@ const projects = [
     images: projectImage2,
   },
   {
-    id: 3,
+    id: "3",
     title: "Mobile App for Task Management",
     description:
       "Built a cross-platform mobile app to help users manage their tasks and increase productivity.",
@@ -41,7 +42,7 @@ const projects = [
     images: projectImage3,
   },
   {
-    id: 4,
+    id: "4",
     title: "Data Visualization Dashboard",
     description:
       "Created an interactive dashboard to visualize and analyze large datasets for business insights.",
@@ -52,16 +53,16 @@ const projects = [
     images: projectImage4,
   },
 ];
-const Projects = () => {
 
+const Projects = () => {
   return (
     <Container>
-    <ProjectsContainer>
-      {projects.map((project) => {
-        return <ProjectCard key={project.id} project={project} />;
-      })}
-    </ProjectsContainer>
-    <ButtonLink to="/portfolio">Explore all projects</ButtonLink>
+      <ProjectsContainer>
+        {projects.map((project) => {
+          return <ProjectCard key={project.id} project={project} />;
+        })}
+      </ProjectsContainer>
+      <ButtonLink to="/portfolio">Explore all projects</ButtonLink>
     </Container>
   );
 };

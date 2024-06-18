@@ -92,7 +92,7 @@ export const ContentContainer = styled.div`
 `;
 
 export const Steps = styled.div`
-  width: 100%;
+  width: 80%;
 `;
 
 export const Step = styled.div`
@@ -103,6 +103,20 @@ export const Step = styled.div`
   padding: 20px;
   border: 1px solid #595959;
   border-radius: 8px;
+  &.animate {
+    animation: 1s ease-in showup; // Add animation property
+  }
+  @keyframes showup {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
@@ -115,7 +129,7 @@ export const StepContainer = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-
+  /* justify-content: space-around; */
   @media screen and (max-width: 1024px) {
     align-items: center;
   }
@@ -146,7 +160,7 @@ export const Description = styled.p`
   letter-spacing: 0.03rem;
   margin-top: 16px;
   max-width: 800px;
-
+  text-align: start;
   @media screen and (max-width: 1200px) {
     font-size: 16px;
   }

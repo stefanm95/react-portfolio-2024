@@ -41,7 +41,7 @@ import Skills from "../components/Skills";
 import { Footer } from "../components/Footer";
 
 
-const observeElements = (selector, animationClass) => {
+ const observeElements = (selector, animationClass) => {
   const elements = document.querySelectorAll(selector);
 
   const observer = new IntersectionObserver((entries) => {

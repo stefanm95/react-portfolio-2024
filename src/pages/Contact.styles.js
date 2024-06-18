@@ -12,6 +12,7 @@ export const Container = styled.div`
   justify-content: space-around; /* Space between the two sections */
   position: relative;
   top: 50px;
+  animation: 1s ease-in 0s 1 opacityControl;
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     position: relative;
@@ -36,7 +37,14 @@ export const Details = styled.div`
   flex-direction: column;
   align-items: flex-start;
   max-width: 45%; /* Set a max-width to control the width of the details section */
-
+  @keyframes opacityControl {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   h3 {
     font-size: 32px;
     margin-bottom: 16px;
@@ -68,9 +76,21 @@ export const ContactForm = styled.form`
   flex-direction: column;
   max-width: 45%; /* Set a max-width to control the width of the form */
   width: 100%; /* Ensure form takes full width within its max-width */
-  animation: 1s ease-in 0s 1 slideInFromLeft;
+  animation: 1s ease-in 0s 1 slideInFromAbove;
   position: relative;
   top: 30px;
+  @keyframes slideInFromAbove {
+    0% {
+      transform: translateY(-100%);
+      --webkit-transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      --webkit-transform: translateY(0);
+      opacity: 1;
+    }
+  }
   @media screen and (max-width: 768px) {
     /* font-size: 32px; */
     max-width: 100%; /* Make form section full width on small screens */
@@ -106,6 +126,9 @@ export const Input = styled.input`
   background-color: #444;
   color: #dedede;
 
+  &::placeholder {
+    font-size: 12px;
+  }
   &:focus {
     outline: none;
     border-color: #a25050;

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
+
 
 import {
   Container,
@@ -41,8 +42,27 @@ const handleScrollDown = () => {
     behavior: "smooth",
   });
 };
+const observeElements = (selector, animationClass) => {
+  const elements = document.querySelectorAll(selector);
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animationClass);
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+};
 const Process = () => {
+
+  useEffect(() => {
+    observeElements(".boxAnimation", "animate");
+  }, []);
   return (
     <>
       <Navbar />
@@ -60,7 +80,7 @@ const Process = () => {
       <br />
       <ContentContainer id="section--2">
         <Steps>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 01</StepText>
               <StepBigText>Requirement Analysis</StepBigText>
@@ -79,7 +99,7 @@ const Process = () => {
               project management and successful delivery.
             </Description>
           </Step>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 02</StepText>
               <StepBigText>Design</StepBigText>
@@ -98,7 +118,7 @@ const Process = () => {
               sizes.
             </Description>
           </Step>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 03</StepText>
               <StepBigText>Development</StepBigText>
@@ -117,7 +137,7 @@ const Process = () => {
               providing a seamless user experience for all users.
             </Description>
           </Step>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 04</StepText>
               <StepBigText>API Integration</StepBigText>
@@ -138,7 +158,7 @@ const Process = () => {
               application with rich functionality and real-time data updates.
             </Description>
           </Step>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 05</StepText>
               <StepBigText>Testing</StepBigText>
@@ -159,7 +179,7 @@ const Process = () => {
               client expectations.
             </Description>
           </Step>
-          <Step>
+          <Step className="boxAnimation">
             <StepContainer>
               <StepText>Step 06</StepText>
               <StepBigText>Deployment</StepBigText>
