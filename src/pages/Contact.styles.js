@@ -6,7 +6,6 @@ export const Container = styled.div`
   margin: 0 auto; /* Center the container */
   padding: 20px;
   background-color: transparent;
-  min-height: calc(100vh - 60px);
   display: flex;
   align-items: flex-start; /* Align items to the top */
   justify-content: space-around; /* Space between the two sections */
