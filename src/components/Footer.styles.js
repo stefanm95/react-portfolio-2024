@@ -3,30 +3,25 @@ import styled from "styled-components";
 export const PromoContainer = styled.div`
 /* margin: 0 auto; */
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 16px;
   width: 100%;
   background-color: transparent;
   flex-shrink: 1;
   overflow-x: hidden;
+  min-height: 30vh;
   @media screen and (max-width: 1024px) {
     flex-direction: column;
-    &:nth-child(0) {
-      font-size: 20px;
-    }
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    &:nth-child(0) {
-      font-size: 12px;
-    }
   }
 `;
 export const ContactInfo = styled.div`
   display: flex;
   position: relative;
-  left: 24vh;
+  /* left: 24vh; */
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
@@ -68,7 +63,7 @@ export const UpworkButton = styled.button`
   width: 100%;
   background-color: #008000;
   border: none;
-  color: #292c2e;
+  color: #dedede;
   border-radius: 4px;
   cursor: pointer;
   font-family: "Urbanist";
@@ -87,7 +82,8 @@ export const FooterContainer = styled.footer`
   position: relative; /* Ensure relative positioning for the footer container */
   display: flex;
   justify-content: space-between;
-  height: auto;
+  align-items: center;
+  height: 10vh;
   padding: 16px;
   top: 50px;
   /* color: var(--text-color-secondary); */

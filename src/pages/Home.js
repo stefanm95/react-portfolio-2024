@@ -148,13 +148,14 @@ const Home = () => {
           some skills I have picked up over my career.
         </ThirdContainerText>
         <Skills />
-        <PlanningSvg>
+        {/*<PlanningSvg>
           <Planning />
-        </PlanningSvg>
+        </PlanningSvg>*/}
       </FourthContainer>
-      <ScrollUp onClick={handleScrollUp}>
+      {/* <ScrollUp onClick={handleScrollUp}>
         <ScrollDownSvg />
       </ScrollUp>
+      */}
       <Footer />
     </>
   );
