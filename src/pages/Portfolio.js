@@ -19,6 +19,8 @@ import projectImage4 from "../assets/images/projects/Image3.png";
 import { ReactComponent as ScrollDownSvg } from "../assets/images/Group 483313.svg";
 import { Footer } from "../components/Footer";
 
+import { handleScrollDown } from "../utils/index.js";
+
 const projects = [
   {
     id: 1,
@@ -110,28 +112,6 @@ const projects = [
   },
 ];
 const Portfolio = () => {
-  const handleScrollDown = () => {
-    const element = document.getElementById("section--2");
-    const navbar = document.querySelector('nav'); // Select the navbar
-  
-    if (!element) {
-      console.error("Element with ID 'section--2' not found.");
-      return;
-    }
-  
-    if (!navbar) {
-      console.error("Navbar element not found.");
-      return;
-    }
-  
-    const navbarHeight = navbar.offsetHeight; // Get the navbar height
-  
-    window.scrollTo({
-      top: element.offsetTop - navbarHeight, // Subtract the navbar height from the scroll position
-      behavior: "smooth",
-    });
-  };
-
   return (
     <>
       <Navbar />

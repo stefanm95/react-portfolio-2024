@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 
 import Navbar from "../components/Navbar";
 
-
 import {
   Container,
   BigText,
@@ -15,51 +14,16 @@ import {
   StepBigText,
   ContentContainer,
   Description,
-  StepContainer
+  StepContainer,
 } from "./Process.styles";
 
 import { ReactComponent as ScrollDownSvg } from "../assets/images/Group 483313.svg";
 import { Footer } from "../components/Footer";
 
-const handleScrollDown = () => {
-  const element = document.getElementById("section--2");
-  const navbar = document.querySelector('nav'); // Select the navbar
+import {observeElements, handleScrollDown} from "../utils/index.js";
 
-  if (!element) {
-    console.error("Element with ID 'section--2' not found.");
-    return;
-  }
 
-  if (!navbar) {
-    console.error("Navbar element not found.");
-    return;
-  }
-
-  const navbarHeight = navbar.offsetHeight; // Get the navbar height
-
-  window.scrollTo({
-    top: element.offsetTop - navbarHeight, // Subtract the navbar height from the scroll position
-    behavior: "smooth",
-  });
-};
-const observeElements = (selector, animationClass) => {
-  const elements = document.querySelectorAll(selector);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(animationClass);
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
-};
 const Process = () => {
-
   useEffect(() => {
     observeElements(".boxAnimation", "animate");
   }, []);
@@ -201,7 +165,7 @@ const Process = () => {
           </Step>
         </Steps>
       </ContentContainer>
-      <Footer/>
+      <Footer />
     </>
   );
 };

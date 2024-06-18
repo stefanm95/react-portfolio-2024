@@ -26,7 +26,7 @@ import {
   ScrollDown,
   ScrollUp,
   ThirdContainertexts,
-  PlanningSvg
+  PlanningSvg,
 } from "./Home.styles";
 
 import { ReactComponent as WavingHand } from "../assets/images/wavingHand.svg";
@@ -40,23 +40,11 @@ import personalImage from "../assets/images/final.png";
 import Skills from "../components/Skills";
 import { Footer } from "../components/Footer";
 
-
- const observeElements = (selector, animationClass) => {
-  const elements = document.querySelectorAll(selector);
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add(animationClass);
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
-};
+import {
+  observeElements,
+  handleScrollDown,
+  handleScrollUp,
+} from "../utils/index.js";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -64,54 +52,10 @@ const Home = () => {
   useEffect(() => {
     observeElements(".boxAnimation", "animate");
   }, []);
-  const handleScrollDown = () => {
-    const element = document.getElementById("section--2");
-    const navbar = document.querySelector('nav'); // Select the navbar
-  
-    if (!element) {
-      console.error("Element with ID 'section--2' not found.");
-      return;
-    }
-  
-    if (!navbar) {
-      console.error("Navbar element not found.");
-      return;
-    }
-  
-    const navbarHeight = navbar.offsetHeight; // Get the navbar height
-  
-    window.scrollTo({
-      top: element.offsetTop - navbarHeight, // Subtract the navbar height from the scroll position
-      behavior: "smooth",
-    });
-  };
-
-  const handleScrollUp = () => {
-    const element = document.getElementById("section--1");
-    const navbar = document.querySelector('nav');
-    console.log("element: ", element);
-    
-    if (!element) {
-      console.error("Element with ID 'section--2' not found.");
-      return;
-    }
-  
-    if (!navbar) {
-      console.error("Navbar element not found.");
-      return;
-    }
-
-    const navbarHeight = navbar.offsetHeight; // Get the navbar height
-  
-    window.scrollTo({
-      top: element.offsetTop - navbarHeight, // Subtract the navbar height from the scroll position
-      behavior: "smooth",
-    });
-  };
 
   const handleRedirect = () => {
     navigate("/contact");
-  }
+  };
 
   return (
     <>
@@ -130,9 +74,9 @@ const Home = () => {
           <WavingHand />
         </Button>
       </Container>
-        <ScrollDown onClick={handleScrollDown}>
-          <ScrollDownSvg />
-        </ScrollDown>
+      <ScrollDown onClick={handleScrollDown}>
+        <ScrollDownSvg />
+      </ScrollDown>
       <HorizontalLine />
 
       <div id="section--2">
