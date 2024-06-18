@@ -9,6 +9,9 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: space-between;
   gap: 30px;
+  &.animate{
+    animation: 1s ease-in showup; // Add animation property
+  }
 `;
 
 export const Image = styled.img`
