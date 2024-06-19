@@ -17,11 +17,6 @@ export const Card = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  max-width: 538px;
-  object-fit: cover;
-`;
-
 export const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;

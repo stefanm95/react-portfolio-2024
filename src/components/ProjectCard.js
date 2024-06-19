@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import { Tooltip } from "react-tooltip";
 import TooltipCard from "./CustomTooltip";
 
+import LazyImage from "../components/LazyImage";
 import { observeElements } from "../utils";
 
-import { Image, Button, ButtonsContainer, Card } from "./ProjectCard.styles";
+import { Button, ButtonsContainer, Card } from "./ProjectCard.styles";
 
 export const ProjectCard = ({ project }) => {
   useEffect(() => {
@@ -13,7 +14,7 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <Card className="boxAnimation">
-      <Image src={project.images} alt={project.title} />
+      <LazyImage src={project.images} alt={project.title} />
       <ButtonsContainer>
         <Button>Landing Page</Button>
         <Button data-tooltip-id={`tooltip-${project.id}`}>View More</Button>

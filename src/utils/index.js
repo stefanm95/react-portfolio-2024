@@ -1,3 +1,5 @@
+
+
 const observeElements = (selector, animationClass) => {
   const elements = document.querySelectorAll(selector);
 
