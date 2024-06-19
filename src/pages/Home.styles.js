@@ -12,6 +12,15 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  @media screen and (max-width: 1024px) {
+    height: 94vh;
+  }
+  @media screen and (max-width: 768px) {
+
+  }
+  @media screen and (max-width: 468px) {
+
+  }
 `;
 
 export const BigText = styled.div`
@@ -118,8 +127,8 @@ export const Button = styled.button`
 
 export const ScrollDown = styled.button`
   position: absolute;
-  right: 200px; /* Adjust as needed to position correctly */
-  bottom: 120px; /* Adjust as needed to position correctly */
+  right: 100px; /* Adjust as needed to position correctly */
+  bottom: 20px; /* Adjust as needed to position correctly */
   background-color: transparent;
   border: none;
   border-radius: 4px;
@@ -135,13 +144,16 @@ export const ScrollDown = styled.button`
     height: 32px;
     background-color: transparent;
   }
- 
+  @media screen and (max-width: 1024px) {
+    bottom: 80px;
+  }
  
   @media screen and (max-width: 768px) {
-    display: none;
+    bottom: 70px;
   }
   @media screen and (max-width: 480px) {
-    display: none;
+    bottom: 50px;
+    right: 40px;
   }
 `;
 
@@ -223,7 +235,11 @@ export const ScImage = styled.img`
   }
   @media screen and (max-width: 480px) {
     font-size: 12px;
-    display: none;
+    /* display: none; */
+    top: 60px;
+    left: -20px;
+    width: 160px;
+    height: 160px;
   }
 `;
 
