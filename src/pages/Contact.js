@@ -1,5 +1,8 @@
 import React from "react";
 import emailjs from "emailjs-com";
+
+import { toast } from "react-toastify";
+
 import {
   Container,
   Details,
@@ -10,6 +13,7 @@ import {
   Input,
   Label,
   Textarea,
+  StyledToastContainer
 } from "./Contact.styles";
 import Navbar from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -36,7 +40,7 @@ const Contact = () => {
   const handleSubmmit = (event) => {
     event.preventDefault()
     console.log(formData);
-
+    // toast.configure();
     emailjs.send(
       "service_ze52d9k",       // Service ID
       "template_vhk6553",      // Template ID
@@ -44,11 +48,12 @@ const Contact = () => {
       "rxKQiI99WPIVy5BnN"           // User ID
     ).then((response) => {
       console.log("SUCCESS!", response.status, response.text);
-      alert("Message sent successfully!");
+      toast.success("Message sent successfully!");
+
       setFormData({ name: "", email: "", message: "" });
     }).catch((error) => {
       console.error("FAILED...", error);
-      alert("Failed to send message, please try again.");
+      toast.error("Failed to send message, please try again.");
     });
   }
 
@@ -104,6 +109,7 @@ const Contact = () => {
             />
           </FormGroup>
           <Button type="submit">Submit</Button>
+          <StyledToastContainer />
         </ContactForm>
       </Container>
       <br />

@@ -16,26 +16,28 @@ import { ReactComponent as Facebook } from "../assets/images/Group 483258.svg";
 import { ReactComponent as Twitter } from "../assets/images/Group 483254.svg";
 import { ReactComponent as Instagram } from "../assets/images/Group 483257.svg";
 import { ReactComponent as LinkedIn } from "../assets/images/Group 483256.svg";
+import { ReactComponent as Email } from "../assets/images/email.svg";
 import { BigText } from "../pages/Portfolio.styles";
 
 export const Footer = () => {
- 
   const handleRedirect = () => {
-    window.location.href = "https://www.upwork.com/freelancers/~01d5ca1470bd14b222";
+    window.location.href =
+      "https://www.upwork.com/freelancers/~01d5ca1470bd14b222";
   };
-
 
   return (
     <>
       <PromoContainer>
         <BigText>Let's Work Togheter -</BigText>
         <ContactInfo>
-          <EmailButton>stefan.moise95@icloud.com</EmailButton>
-            <UpworkButton onClick={handleRedirect}>
-              <Upwork />
-              Hire me on Upwork
-            </UpworkButton>
-          
+          <EmailButton>
+            <Email />
+            stefan.moise95@icloud.com
+          </EmailButton>
+          <UpworkButton onClick={handleRedirect}>
+            <Upwork />
+            Hire me on Upwork
+          </UpworkButton>
         </ContactInfo>
       </PromoContainer>
       <FooterContainer>

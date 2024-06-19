@@ -50,12 +50,16 @@ export const EmailButton = styled.button`
   font-size: 16px;
   text-decoration: none;
   height: 6vh;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;
 
 export const UpworkButton = styled.button`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  gap: 28px;
   width: 100%;
   background-color: #008000;
   border: none;

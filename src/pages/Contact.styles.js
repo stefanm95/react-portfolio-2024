@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Container = styled.div`
   max-width: 1200px; /* Set a max-width to constrain the container */
@@ -23,6 +25,54 @@ export const Container = styled.div`
     flex-direction: column;
     position: relative;
     top: 20px;
+  }
+`;
+
+export const StyledToastContainer = styled(ToastContainer)`
+  /* Positioning */
+  z-index: 9999;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px; /* Adjust width as needed */
+
+  /* Toast style */
+  .Toastify__toast {
+    /* Background and text color */
+    background-color: black;
+    color: #dedede;
+    border-radius: 4px;
+    padding: 12px;
+    /* margin-bottom: 10px; */
+    
+    /* Font */
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+
+    /* Box shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .Toastify__close-button {
+    color: black;
+    background-color: black;
+  }
+  .Toastify__close-button > svg {
+    fill: white;
+  }
+  /* Success toast */
+  .Toastify__toast--success {
+    background-color: black;
+  }
+
+  /* Error toast */
+  .Toastify__toast--error {
+    background-color: black;
+  }
+
+  /* Toast body */
+  .Toastify__toast-body {
+    padding: 8px;
+    background-color: black;
   }
 `;
 
