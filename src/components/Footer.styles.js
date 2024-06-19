@@ -49,11 +49,7 @@ export const EmailButton = styled.button`
   font-family: "Urbanist";
   font-size: 16px;
   text-decoration: none;
-  height: 5vh;
-  &:hover {
-    color: #fff;
-  }
-  
+  height: 6vh;
 `;
 
 export const UpworkButton = styled.button`
@@ -70,12 +66,9 @@ export const UpworkButton = styled.button`
   font-size: 16px;
   position: relative;
   top: 5px;
-  height: 5vh;
+  height: 6vh;
   text-decoration: none;
-  border: 1px solid rgb(121, 121, 121, 0.8);
-  &:hover {
-    color: #dedede;
-  }
+  /* border: 1px solid rgb(121, 121, 121, 0.8); */
 `;
 
 export const FooterContainer = styled.footer`

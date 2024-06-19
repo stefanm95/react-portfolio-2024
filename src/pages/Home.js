@@ -40,7 +40,6 @@ import { Footer } from "../components/Footer";
 import {
   observeElements,
   handleScrollDown,
-  handleScrollUp,
 } from "../utils/index.js";
 
 const Home = () => {
@@ -80,9 +79,9 @@ const Home = () => {
         <SecondContainer id="section--3">
           <Socials />
           <SecondContainerText>
-            Hi, I am Stefan! I'm a designer with 3 years of web development
+            Hi, I am Stefan! I'm a Web Developer with 3 years of web development
             experience with the past 2 years spent honing my skills in React,
-            Typescript. And Node.js. I'm passionate about creating intuitive
+            Typescript And Node.js. I'm passionate about creating intuitive
             user experiences and innovative designs.
           </SecondContainerText>
           <ScBox>
