@@ -10,7 +10,10 @@ export const Card = styled.div`
   justify-content: space-between;
   gap: 30px;
   &.animate{
-    animation: 1s ease-in showup; // Add animation property
+    animation: 2s ease-in showup; // Add animation property
+    -webkit-animation: 2s ease-in showup;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
   }
 `;
 
@@ -34,6 +37,7 @@ export const Button = styled.button`
   padding: 10px 10px;
   cursor: pointer;
   transition: background-color 100ms ease;
+  -webkit-transition: background-color 100ms ease;
   font-family: "Urbanist Light", "Poppins", sans-serif;
   letter-spacing: 0.02rem;
   &:hover {

@@ -24,9 +24,7 @@ import {
   ThirdContainerText,
   FourthContainer,
   ScrollDown,
-  ScrollUp,
   ThirdContainertexts,
-  PlanningSvg,
 } from "./Home.styles";
 
 import { ReactComponent as WavingHand } from "../assets/images/wavingHand.svg";
@@ -34,7 +32,6 @@ import { ReactComponent as Raiffeisen } from "../assets/images/raifflogosvg.svg"
 import { ReactComponent as Fme } from "../assets/images/Fme-Logo.svg";
 import { ReactComponent as Upwork } from "../assets/images/upwork-emblem-vector-37696674.svg";
 import { ReactComponent as ScrollDownSvg } from "../assets/images/Group 483313.svg";
-import { ReactComponent as Planning } from "../assets/images/Group 10881.svg";
 
 import personalImage from "../assets/images/final.png";
 import Skills from "../components/Skills";
@@ -148,14 +145,7 @@ const Home = () => {
           some skills I have picked up over my career.
         </ThirdContainerText>
         <Skills />
-        {/*<PlanningSvg>
-          <Planning />
-        </PlanningSvg>*/}
       </FourthContainer>
-      {/* <ScrollUp onClick={handleScrollUp}>
-        <ScrollDownSvg />
-      </ScrollUp>
-      */}
       <Footer />
     </>
   );

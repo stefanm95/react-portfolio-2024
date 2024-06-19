@@ -1,4 +1,5 @@
 import React from "react";
+import emailjs from "emailjs-com";
 import {
   Container,
   Details,
@@ -16,6 +17,41 @@ import { Footer } from "../components/Footer";
 import personalImg from "../assets/images/final.png";
 
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    message: "",
+  })
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData(prevFormData => {
+      return {
+        ...prevFormData,
+        [name]: value
+      }
+    })
+  }
+
+  const handleSubmmit = (event) => {
+    event.preventDefault()
+    console.log(formData);
+
+    emailjs.send(
+      "service_ze52d9k",       // Service ID
+      "template_vhk6553",      // Template ID
+      formData,                // Template parameters
+      "rxKQiI99WPIVy5BnN"           // User ID
+    ).then((response) => {
+      console.log("SUCCESS!", response.status, response.text);
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    }).catch((error) => {
+      console.error("FAILED...", error);
+      alert("Failed to send message, please try again.");
+    });
+  }
+
   return (
     <>
       <Navbar />
@@ -28,15 +64,18 @@ const Contact = () => {
           <p>Whatsapp - +40723598489</p>
           <p>Email - stefan.moise95@icloud.com</p>
         </Details>
-        <ContactForm>
+        <ContactForm onSubmit={handleSubmmit}>
           <FormGroup>
             <Label htmlFor="name">Full Name</Label>
             <Input
-              type="name"
+              type="text"
               id="name"
               name="name"
               required
               placeholder="Enter your full name"
+              value={formData.name}
+              onChange={handleChange}
+              autoComplete="off"
             />
           </FormGroup>
           <FormGroup>
@@ -47,6 +86,8 @@ const Contact = () => {
               name="email"
               required
               placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
             />
           </FormGroup>
           <FormGroup>
@@ -58,6 +99,8 @@ const Contact = () => {
               rows={5}
               required
               placeholder="Send me a message!"
+              value={formData.message}
+              onChange={handleChange}
             />
           </FormGroup>
           <Button type="submit">Submit</Button>

@@ -11,6 +11,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 `;
 
 export const BigText = styled.div`
@@ -260,11 +261,13 @@ export const Box = styled.div`
   overflow: hidden;
   
   &.animate {
-    animation: 1s ease-in showup; // Add animation property
+    animation: 2s ease-in showup; // Add animation property
+    -webkit-animation: 2s ease-in showup;
   }
   @keyframes showup {
     0% {
       opacity: 0;
+      
     }
     50% {
       opacity: 0.5;
