@@ -34,7 +34,7 @@ export const skills = [
     id: 4,
     image: ReactSvg,
     // icon: URL(""),
-    title: "react library",
+    title: "react framework",
     description:
       "As a React developer I specialize in building modern, dynamic web applications using React.js, a popular JS library developed by Facebook. The main focus is on creating reusable UI components and managing the application's state effectively.",
   },
